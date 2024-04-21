@@ -21,10 +21,27 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `body {
-  background-color: blue;
+___CSS_LOADER_EXPORT___.push([module.id, `* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-`, "",{"version":3,"sources":["webpack://./app/main.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;AACxB","sourcesContent":["body {\n  background-color: blue;\n}\n"],"sourceRoot":""}]);
+body {
+  background-color: blue;
+  height: 100vh;
+  display: flex;
+}
+nav {
+  height: 100vh;
+  width: 20vw;
+  background-color: aqua;
+}
+main {
+  height: 100vh;
+  width: 80vw;
+  background-color: azure;
+}
+`, "",{"version":3,"sources":["webpack://./app/main.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,sBAAsB;AACxB;AACA;EACE,sBAAsB;EACtB,aAAa;EACb,aAAa;AACf;AACA;EACE,aAAa;EACb,WAAW;EACX,sBAAsB;AACxB;AACA;EACE,aAAa;EACb,WAAW;EACX,uBAAuB;AACzB","sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\nbody {\n  background-color: blue;\n  height: 100vh;\n  display: flex;\n}\nnav {\n  height: 100vh;\n  width: 20vw;\n  background-color: aqua;\n}\nmain {\n  height: 100vh;\n  width: 80vw;\n  background-color: azure;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17800,6 +17817,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.css */ "./app/main.css");
 
 
+const sideBar = document.createElement("nav");
+const mainWindow = document.createElement("main");
+document.body.appendChild(sideBar);
+document.body.appendChild(mainWindow);
 })();
 
 /******/ })()
