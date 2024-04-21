@@ -28,7 +28,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `* {
 }
 
 body {
-  background-color: blue;
   height: 100vh;
   display: flex;
   font-family: "Walter Turncoat", cursive;
@@ -38,7 +37,7 @@ body {
 nav {
   height: 100vh;
   width: 20vw;
-  background-color: aqua;
+  background-color: rgb(201, 137, 27);
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -56,7 +55,7 @@ main {
   width: 80vw;
   background-color: azure;
 }
-`, "",{"version":3,"sources":["webpack://./app/main.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,sBAAsB;AACxB;;AAEA;EACE,sBAAsB;EACtB,aAAa;EACb,aAAa;EACb,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,WAAW;EACX,sBAAsB;EACtB,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,gBAAgB;AAClB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,WAAW;EACX,uBAAuB;AACzB","sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  background-color: blue;\n  height: 100vh;\n  display: flex;\n  font-family: \"Walter Turncoat\", cursive;\n  font-weight: 400;\n  font-style: normal;\n}\nnav {\n  height: 100vh;\n  width: 20vw;\n  background-color: aqua;\n  font-size: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nul {\n  margin-top: 2rem;\n  list-style: none;\n}\nli {\n  margin-bottom: 1rem;\n}\nmain {\n  height: 100vh;\n  width: 80vw;\n  background-color: azure;\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./app/main.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,WAAW;EACX,mCAAmC;EACnC,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,gBAAgB;AAClB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,WAAW;EACX,uBAAuB;AACzB","sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  height: 100vh;\n  display: flex;\n  font-family: \"Walter Turncoat\", cursive;\n  font-weight: 400;\n  font-style: normal;\n}\nnav {\n  height: 100vh;\n  width: 20vw;\n  background-color: rgb(201, 137, 27);\n  font-size: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nul {\n  margin-top: 2rem;\n  list-style: none;\n}\nli {\n  margin-bottom: 1rem;\n}\nmain {\n  height: 100vh;\n  width: 80vw;\n  background-color: azure;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -181,6 +180,21 @@ module.exports = function (item) {
   }
   return [content].join("\n");
 };
+
+/***/ }),
+
+/***/ "./app/img/scrampled.png":
+/*!*******************************!*\
+  !*** ./app/img/scrampled.png ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "/public/icons/scrampled.png");
 
 /***/ }),
 
@@ -17813,6 +17827,11 @@ module.exports = styleTagTransform;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		__webpack_require__.p = "/dist/";
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -17830,6 +17849,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.css */ "./app/main.css");
+/* harmony import */ var _img_scrampled_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/scrampled.png */ "./app/img/scrampled.png");
+
 
 
 const sideBar = document.createElement("nav");
@@ -17839,18 +17860,22 @@ const projectsList = document.createElement("ul");
 const allActivites = document.createElement("li");
 const today = document.createElement("li");
 const thisWeek = document.createElement("li");
+const addProjects = document.createElement("li");
 const projectsTitle = document.createElement("h2");
 const allActivites_text = document.createTextNode("All Activities");
 const today_text = document.createTextNode("Today");
 const thisWeek_text = document.createTextNode("This Week");
 const projectsTitle_text = document.createTextNode("Projects");
+const addProjects_text = document.createTextNode("Add Project");
 allActivites.appendChild(allActivites_text);
 today.appendChild(today_text);
 thisWeek.appendChild(thisWeek_text);
 projectsTitle.appendChild(projectsTitle_text);
+addProjects.appendChild(addProjects_text);
 activitiesList.appendChild(allActivites);
 activitiesList.appendChild(today);
 activitiesList.appendChild(thisWeek);
+projectsList.appendChild(addProjects);
 sideBar.appendChild(activitiesList);
 sideBar.appendChild(projectsTitle);
 sideBar.appendChild(projectsList);
