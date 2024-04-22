@@ -24,6 +24,14 @@ const projectsTitle_text = document.createTextNode("Projects");
 
 const addProjects_text = document.createTextNode("Add Project");
 
+const actItem_Title = document.createElement("h4");
+const actItem_check = document.createElement("button");
+const actItem_del = document.createElement("button");
+
+const activitiesItem = document.createElement("div");
+
+const actItem_Title_text = document.createTextNode("EXAMPLE 1");
+
 allActivites.appendChild(allActivites_text);
 today.appendChild(today_text);
 thisWeek.appendChild(thisWeek_text);
@@ -43,5 +51,13 @@ mainWindow.style.backgroundImage = `url(${img})`;
 sideBar.appendChild(activitiesList);
 sideBar.appendChild(projectsTitle);
 sideBar.appendChild(projectsList);
+
+actItem_Title.appendChild(actItem_Title_text);
+activitiesItem.appendChild(actItem_Title);
+activitiesItem.appendChild(actItem_check);
+activitiesItem.appendChild(actItem_del);
+
+mainWindow.appendChild(activitiesItem);
+
 document.body.appendChild(sideBar);
 document.body.appendChild(mainWindow);
