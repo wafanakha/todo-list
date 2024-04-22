@@ -46,6 +46,7 @@ nav {
 ul {
   margin-top: 2rem;
   list-style: none;
+  margin-bottom: 2rem;
 }
 li {
   margin-bottom: 1rem;
@@ -53,9 +54,8 @@ li {
 main {
   height: 100vh;
   width: 80vw;
-  background-color: azure;
 }
-`, "",{"version":3,"sources":["webpack://./app/main.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,WAAW;EACX,mCAAmC;EACnC,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,gBAAgB;AAClB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,WAAW;EACX,uBAAuB;AACzB","sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  height: 100vh;\n  display: flex;\n  font-family: \"Walter Turncoat\", cursive;\n  font-weight: 400;\n  font-style: normal;\n}\nnav {\n  height: 100vh;\n  width: 20vw;\n  background-color: rgb(201, 137, 27);\n  font-size: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nul {\n  margin-top: 2rem;\n  list-style: none;\n}\nli {\n  margin-bottom: 1rem;\n}\nmain {\n  height: 100vh;\n  width: 80vw;\n  background-color: azure;\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./app/main.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,WAAW;EACX,mCAAmC;EACnC,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,WAAW;AACb","sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  height: 100vh;\n  display: flex;\n  font-family: \"Walter Turncoat\", cursive;\n  font-weight: 400;\n  font-style: normal;\n}\nnav {\n  height: 100vh;\n  width: 20vw;\n  background-color: rgb(201, 137, 27);\n  font-size: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nul {\n  margin-top: 2rem;\n  list-style: none;\n  margin-bottom: 2rem;\n}\nli {\n  margin-bottom: 1rem;\n}\nmain {\n  height: 100vh;\n  width: 80vw;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17876,6 +17876,7 @@ activitiesList.appendChild(allActivites);
 activitiesList.appendChild(today);
 activitiesList.appendChild(thisWeek);
 projectsList.appendChild(addProjects);
+mainWindow.style.backgroundImage = `url(${_img_scrampled_png__WEBPACK_IMPORTED_MODULE_2__["default"]})`;
 sideBar.appendChild(activitiesList);
 sideBar.appendChild(projectsTitle);
 sideBar.appendChild(projectsList);

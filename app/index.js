@@ -38,6 +38,8 @@ activitiesList.appendChild(thisWeek);
 
 projectsList.appendChild(addProjects);
 
+mainWindow.style.backgroundImage = `url(${img})`;
+
 sideBar.appendChild(activitiesList);
 sideBar.appendChild(projectsTitle);
 sideBar.appendChild(projectsList);
