@@ -29,7 +29,7 @@ const actItem_check = document.createElement("button");
 const actItem_del = document.createElement("button");
 
 const activitiesItem = document.createElement("div");
-
+const itemButtonGroup = document.createElement("div");
 const actItem_Title_text = document.createTextNode("EXAMPLE 1");
 
 allActivites.appendChild(allActivites_text);
@@ -54,8 +54,9 @@ sideBar.appendChild(projectsList);
 
 actItem_Title.appendChild(actItem_Title_text);
 activitiesItem.appendChild(actItem_Title);
-activitiesItem.appendChild(actItem_check);
-activitiesItem.appendChild(actItem_del);
+itemButtonGroup.appendChild(actItem_check);
+itemButtonGroup.appendChild(actItem_del);
+activitiesItem.appendChild(itemButtonGroup);
 
 mainWindow.appendChild(activitiesItem);
 
