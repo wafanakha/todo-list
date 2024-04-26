@@ -30,7 +30,14 @@ const actItem_del = document.createElement("button");
 
 const activitiesItem = document.createElement("div");
 const itemButtonGroup = document.createElement("div");
+const actItem_check_icon = document.createElement("span");
+const actItem_del_icon = document.createElement("span");
+
 const actItem_Title_text = document.createTextNode("EXAMPLE 1");
+actItem_check_icon.classList.add("material-symbols-outlined");
+actItem_del_icon.classList.add("material-symbols-outlined");
+const actItem_check_text = document.createTextNode("check");
+const actItem_del_text = document.createTextNode("delete");
 
 allActivites.appendChild(allActivites_text);
 today.appendChild(today_text);
@@ -54,6 +61,11 @@ sideBar.appendChild(projectsList);
 
 actItem_Title.appendChild(actItem_Title_text);
 activitiesItem.appendChild(actItem_Title);
+actItem_check_icon.appendChild(actItem_check_text);
+actItem_del_icon.appendChild(actItem_del_text);
+actItem_check.appendChild(actItem_check_icon);
+actItem_del.appendChild(actItem_del_icon);
+
 itemButtonGroup.appendChild(actItem_check);
 itemButtonGroup.appendChild(actItem_del);
 activitiesItem.appendChild(itemButtonGroup);

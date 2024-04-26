@@ -55,7 +55,13 @@ main {
   height: 100vh;
   width: 80vw;
 }
-`, "",{"version":3,"sources":["webpack://./app/main.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,WAAW;EACX,mCAAmC;EACnC,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,WAAW;AACb","sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  height: 100vh;\n  display: flex;\n  font-family: \"Walter Turncoat\", cursive;\n  font-weight: 400;\n  font-style: normal;\n}\nnav {\n  height: 100vh;\n  width: 20vw;\n  background-color: rgb(201, 137, 27);\n  font-size: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nul {\n  margin-top: 2rem;\n  list-style: none;\n  margin-bottom: 2rem;\n}\nli {\n  margin-bottom: 1rem;\n}\nmain {\n  height: 100vh;\n  width: 80vw;\n}\n"],"sourceRoot":""}]);
+main > div {
+  width: 100%;
+  background-color: beige;
+  display: flex;
+  justify-content: space-between;
+}
+`, "",{"version":3,"sources":["webpack://./app/main.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,WAAW;EACX,mCAAmC;EACnC,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,WAAW;EACX,uBAAuB;EACvB,aAAa;EACb,8BAA8B;AAChC","sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  height: 100vh;\n  display: flex;\n  font-family: \"Walter Turncoat\", cursive;\n  font-weight: 400;\n  font-style: normal;\n}\nnav {\n  height: 100vh;\n  width: 20vw;\n  background-color: rgb(201, 137, 27);\n  font-size: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nul {\n  margin-top: 2rem;\n  list-style: none;\n  margin-bottom: 2rem;\n}\nli {\n  margin-bottom: 1rem;\n}\nmain {\n  height: 100vh;\n  width: 80vw;\n}\nmain > div {\n  width: 100%;\n  background-color: beige;\n  display: flex;\n  justify-content: space-between;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17872,7 +17878,13 @@ const actItem_check = document.createElement("button");
 const actItem_del = document.createElement("button");
 const activitiesItem = document.createElement("div");
 const itemButtonGroup = document.createElement("div");
+const actItem_check_icon = document.createElement("span");
+const actItem_del_icon = document.createElement("span");
 const actItem_Title_text = document.createTextNode("EXAMPLE 1");
+actItem_check_icon.classList.add("material-symbols-outlined");
+actItem_del_icon.classList.add("material-symbols-outlined");
+const actItem_check_text = document.createTextNode("check");
+const actItem_del_text = document.createTextNode("delete");
 allActivites.appendChild(allActivites_text);
 today.appendChild(today_text);
 thisWeek.appendChild(thisWeek_text);
@@ -17888,6 +17900,10 @@ sideBar.appendChild(projectsTitle);
 sideBar.appendChild(projectsList);
 actItem_Title.appendChild(actItem_Title_text);
 activitiesItem.appendChild(actItem_Title);
+actItem_check_icon.appendChild(actItem_check_text);
+actItem_del_icon.appendChild(actItem_del_text);
+actItem_check.appendChild(actItem_check_icon);
+actItem_del.appendChild(actItem_del_icon);
 itemButtonGroup.appendChild(actItem_check);
 itemButtonGroup.appendChild(actItem_del);
 activitiesItem.appendChild(itemButtonGroup);
