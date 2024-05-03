@@ -1,9 +1,11 @@
 import _ from "lodash";
 import "./main.css";
 import img from "./img/scrampled.png";
+import { itemAdding } from "./logic.js";
 
 const sideBar = document.createElement("nav");
 const mainWindow = document.createElement("main");
+mainWindow.classList.add("main");
 
 const activitiesList = document.createElement("ul");
 const projectsList = document.createElement("ul");
@@ -79,3 +81,5 @@ mainWindow.appendChild(addItem);
 
 document.body.appendChild(sideBar);
 document.body.appendChild(mainWindow);
+
+addItem.addEventListener("click", itemAdding);

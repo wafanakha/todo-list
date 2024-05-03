@@ -37,4 +37,5 @@ main > div {
   background-color: beige;
   display: flex;
   justify-content: space-between;
+  margin: 5px 0 5px 0;
 }
