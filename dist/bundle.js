@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   itemClear: () => (/* binding */ itemClear)
 /* harmony export */ });
 const itemAdding = () => {
-  const mainWindow = document.querySelector(".main");
+  const mainWindow = document.querySelector("main");
   const activitiesItem2 = document.createElement("div");
   const actItem_Title2 = document.createElement("h4");
   const actItem_check2 = document.createElement("button");
@@ -37,8 +37,15 @@ const itemAdding = () => {
   itemButtonGroup2.appendChild(actItem_del2);
   activitiesItem2.appendChild(itemButtonGroup2);
   mainWindow.appendChild(activitiesItem2);
+  activitiesItem2.classList.add("items");
+  const activitiesItems = document.querySelectorAll(".items");
+  activitiesItems.forEach(function (e) {
+    e.addEventListener("click", itemClear);
+  });
 };
-const itemClear = () => {};
+const itemClear = function () {
+  this.remove();
+};
 
 /***/ }),
 
@@ -17905,7 +17912,6 @@ __webpack_require__.r(__webpack_exports__);
 
 const sideBar = document.createElement("nav");
 const mainWindow = document.createElement("main");
-mainWindow.classList.add("main");
 const activitiesList = document.createElement("ul");
 const projectsList = document.createElement("ul");
 const allActivites = document.createElement("li");

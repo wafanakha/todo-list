@@ -1,11 +1,10 @@
 import _ from "lodash";
 import "./main.css";
 import img from "./img/scrampled.png";
-import { itemAdding } from "./logic.js";
+import { itemAdding, itemClear } from "./logic.js";
 
 const sideBar = document.createElement("nav");
 const mainWindow = document.createElement("main");
-mainWindow.classList.add("main");
 
 const activitiesList = document.createElement("ul");
 const projectsList = document.createElement("ul");

@@ -1,5 +1,5 @@
 export const itemAdding = () => {
-  const mainWindow = document.querySelector(".main");
+  const mainWindow = document.querySelector("main");
   const activitiesItem2 = document.createElement("div");
   const actItem_Title2 = document.createElement("h4");
   const actItem_check2 = document.createElement("button");
@@ -26,6 +26,15 @@ export const itemAdding = () => {
   activitiesItem2.appendChild(itemButtonGroup2);
 
   mainWindow.appendChild(activitiesItem2);
+
+  activitiesItem2.classList.add("items");
+
+  const activitiesItems = document.querySelectorAll(".items");
+  activitiesItems.forEach(function (e) {
+    e.addEventListener("click", itemClear);
+  });
 };
 
-export const itemClear = () => {};
+export const itemClear = function () {
+  this.remove();
+};
