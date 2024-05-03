@@ -1,6 +1,47 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./app/logic.js":
+/*!**********************!*\
+  !*** ./app/logic.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   itemAdding: () => (/* binding */ itemAdding),
+/* harmony export */   itemClear: () => (/* binding */ itemClear)
+/* harmony export */ });
+const itemAdding = () => {
+  const mainWindow = document.querySelector(".main");
+  const activitiesItem2 = document.createElement("div");
+  const actItem_Title2 = document.createElement("h4");
+  const actItem_check2 = document.createElement("button");
+  const actItem_del2 = document.createElement("button");
+  const itemButtonGroup2 = document.createElement("div");
+  const actItem_check_icon2 = document.createElement("span");
+  const actItem_del_icon2 = document.createElement("span");
+  const actItem_Title_text2 = document.createTextNode("EXAMPLE 1");
+  actItem_check_icon2.classList.add("material-symbols-outlined");
+  actItem_del_icon2.classList.add("material-symbols-outlined");
+  const actItem_check_text2 = document.createTextNode("check");
+  const actItem_del_text2 = document.createTextNode("delete");
+  actItem_Title2.appendChild(actItem_Title_text2);
+  activitiesItem2.appendChild(actItem_Title2);
+  actItem_check_icon2.appendChild(actItem_check_text2);
+  actItem_del_icon2.appendChild(actItem_del_text2);
+  actItem_check2.appendChild(actItem_check_icon2);
+  actItem_del2.appendChild(actItem_del_icon2);
+  itemButtonGroup2.appendChild(actItem_check2);
+  itemButtonGroup2.appendChild(actItem_del2);
+  activitiesItem2.appendChild(itemButtonGroup2);
+  mainWindow.appendChild(activitiesItem2);
+};
+const itemClear = () => {};
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./app/main.css":
 /*!************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./app/main.css ***!
@@ -60,8 +101,9 @@ main > div {
   background-color: beige;
   display: flex;
   justify-content: space-between;
+  margin: 5px 0 5px 0;
 }
-`, "",{"version":3,"sources":["webpack://./app/main.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,WAAW;EACX,mCAAmC;EACnC,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,WAAW;EACX,uBAAuB;EACvB,aAAa;EACb,8BAA8B;AAChC","sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  height: 100vh;\n  display: flex;\n  font-family: \"Walter Turncoat\", cursive;\n  font-weight: 400;\n  font-style: normal;\n}\nnav {\n  height: 100vh;\n  width: 20vw;\n  background-color: rgb(201, 137, 27);\n  font-size: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nul {\n  margin-top: 2rem;\n  list-style: none;\n  margin-bottom: 2rem;\n}\nli {\n  margin-bottom: 1rem;\n}\nmain {\n  height: 100vh;\n  width: 80vw;\n}\nmain > div {\n  width: 100%;\n  background-color: beige;\n  display: flex;\n  justify-content: space-between;\n}\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./app/main.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,WAAW;EACX,mCAAmC;EACnC,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,WAAW;EACX,uBAAuB;EACvB,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;AACrB","sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  height: 100vh;\n  display: flex;\n  font-family: \"Walter Turncoat\", cursive;\n  font-weight: 400;\n  font-style: normal;\n}\nnav {\n  height: 100vh;\n  width: 20vw;\n  background-color: rgb(201, 137, 27);\n  font-size: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nul {\n  margin-top: 2rem;\n  list-style: none;\n  margin-bottom: 2rem;\n}\nli {\n  margin-bottom: 1rem;\n}\nmain {\n  height: 100vh;\n  width: 80vw;\n}\nmain > div {\n  width: 100%;\n  background-color: beige;\n  display: flex;\n  justify-content: space-between;\n  margin: 5px 0 5px 0;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17856,11 +17898,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.css */ "./app/main.css");
 /* harmony import */ var _img_scrampled_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/scrampled.png */ "./app/img/scrampled.png");
+/* harmony import */ var _logic_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./logic.js */ "./app/logic.js");
+
 
 
 
 const sideBar = document.createElement("nav");
 const mainWindow = document.createElement("main");
+mainWindow.classList.add("main");
 const activitiesList = document.createElement("ul");
 const projectsList = document.createElement("ul");
 const allActivites = document.createElement("li");
@@ -17914,6 +17959,7 @@ mainWindow.appendChild(activitiesItem);
 mainWindow.appendChild(addItem);
 document.body.appendChild(sideBar);
 document.body.appendChild(mainWindow);
+addItem.addEventListener("click", _logic_js__WEBPACK_IMPORTED_MODULE_3__.itemAdding);
 })();
 
 /******/ })()
