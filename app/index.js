@@ -25,20 +25,6 @@ const projectsTitle_text = document.createTextNode("Projects");
 
 const addProjects_text = document.createTextNode("Add Project");
 
-const activitiesItem = document.createElement("div");
-const actItem_Title = document.createElement("h4");
-const actItem_check = document.createElement("button");
-const actItem_del = document.createElement("button");
-const itemButtonGroup = document.createElement("div");
-const actItem_check_icon = document.createElement("span");
-const actItem_del_icon = document.createElement("span");
-
-const actItem_Title_text = document.createTextNode("EXAMPLE 1");
-actItem_check_icon.classList.add("material-symbols-outlined");
-actItem_del_icon.classList.add("material-symbols-outlined");
-const actItem_check_text = document.createTextNode("check");
-const actItem_del_text = document.createTextNode("delete");
-
 const addItem = document.createElement("div");
 const addItem_text = document.createTextNode("ADD ITEM");
 
@@ -62,20 +48,8 @@ sideBar.appendChild(activitiesList);
 sideBar.appendChild(projectsTitle);
 sideBar.appendChild(projectsList);
 
-actItem_Title.appendChild(actItem_Title_text);
-activitiesItem.appendChild(actItem_Title);
-actItem_check_icon.appendChild(actItem_check_text);
-actItem_del_icon.appendChild(actItem_del_text);
-actItem_check.appendChild(actItem_check_icon);
-actItem_del.appendChild(actItem_del_icon);
-
-itemButtonGroup.appendChild(actItem_check);
-itemButtonGroup.appendChild(actItem_del);
-activitiesItem.appendChild(itemButtonGroup);
-
 addItem.appendChild(addItem_text);
 
-mainWindow.appendChild(activitiesItem);
 mainWindow.appendChild(addItem);
 
 document.body.appendChild(sideBar);

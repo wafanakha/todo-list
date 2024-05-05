@@ -15,32 +15,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const itemAdding = () => {
   const mainWindow = document.querySelector("main");
-  const activitiesItem2 = document.createElement("div");
-  const actItem_Title2 = document.createElement("h4");
-  const actItem_check2 = document.createElement("button");
-  const actItem_del2 = document.createElement("button");
-  const itemButtonGroup2 = document.createElement("div");
-  const actItem_check_icon2 = document.createElement("span");
-  const actItem_del_icon2 = document.createElement("span");
-  const actItem_Title_text2 = document.createTextNode("EXAMPLE 1");
-  actItem_check_icon2.classList.add("material-symbols-outlined");
-  actItem_del_icon2.classList.add("material-symbols-outlined");
-  const actItem_check_text2 = document.createTextNode("check");
-  const actItem_del_text2 = document.createTextNode("delete");
-  actItem_Title2.appendChild(actItem_Title_text2);
-  activitiesItem2.appendChild(actItem_Title2);
-  actItem_check_icon2.appendChild(actItem_check_text2);
-  actItem_del_icon2.appendChild(actItem_del_text2);
-  actItem_check2.appendChild(actItem_check_icon2);
-  actItem_del2.appendChild(actItem_del_icon2);
-  itemButtonGroup2.appendChild(actItem_check2);
-  itemButtonGroup2.appendChild(actItem_del2);
-  activitiesItem2.appendChild(itemButtonGroup2);
-  mainWindow.appendChild(activitiesItem2);
-  activitiesItem2.classList.add("items");
-  const activitiesItems = document.querySelectorAll(".items");
-  activitiesItems.forEach(function (e) {
-    e.addEventListener("click", itemClear);
+  const addingActivities = document.createElement("div");
+  addingActivities.classList.add("data");
+  document.body.appendChild(addingActivities);
+  const inputTitle = document.createElement("input");
+  const inputDate = document.createElement("input");
+  inputDate.type = "date";
+  const buttonOk = document.createElement("span");
+  const buttonOk_text = document.createTextNode("OK");
+  const addingForm = document.createElement("form");
+  buttonOk.appendChild(buttonOk_text);
+  addingForm.appendChild(inputTitle);
+  addingForm.appendChild(inputDate);
+  addingForm.appendChild(buttonOk);
+  addingActivities.appendChild(addingForm);
+  buttonOk.addEventListener("click", () => {
+    const activitiesItem2 = document.createElement("div");
+    const actItem_Title2 = document.createElement("h4");
+    const actItem_check2 = document.createElement("button");
+    const actItem_del2 = document.createElement("button");
+    const itemButtonGroup2 = document.createElement("div");
+    const actItem_check_icon2 = document.createElement("span");
+    const actItem_del_icon2 = document.createElement("span");
+    const actItem_Title_text2 = document.createTextNode(inputTitle.value);
+    actItem_check_icon2.classList.add("material-symbols-outlined");
+    actItem_del_icon2.classList.add("material-symbols-outlined");
+    const actItem_check_text2 = document.createTextNode("check");
+    const actItem_del_text2 = document.createTextNode("delete");
+    actItem_Title2.appendChild(actItem_Title_text2);
+    activitiesItem2.appendChild(actItem_Title2);
+    actItem_check_icon2.appendChild(actItem_check_text2);
+    actItem_del_icon2.appendChild(actItem_del_text2);
+    actItem_check2.appendChild(actItem_check_icon2);
+    actItem_del2.appendChild(actItem_del_icon2);
+    itemButtonGroup2.appendChild(actItem_check2);
+    itemButtonGroup2.appendChild(actItem_del2);
+    activitiesItem2.appendChild(itemButtonGroup2);
+    mainWindow.appendChild(activitiesItem2);
+    activitiesItem2.classList.add("items");
+    addingActivities.style.visibility = "hidden";
+    const activitiesItems = document.querySelectorAll(".items");
+    activitiesItems.forEach(function (e) {
+      e.addEventListener("click", itemClear);
+    });
   });
 };
 const itemClear = function () {
@@ -110,7 +127,16 @@ main > div {
   justify-content: space-between;
   margin: 5px 0 5px 0;
 }
-`, "",{"version":3,"sources":["webpack://./app/main.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,WAAW;EACX,mCAAmC;EACnC,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,WAAW;EACX,uBAAuB;EACvB,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;AACrB","sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  height: 100vh;\n  display: flex;\n  font-family: \"Walter Turncoat\", cursive;\n  font-weight: 400;\n  font-style: normal;\n}\nnav {\n  height: 100vh;\n  width: 20vw;\n  background-color: rgb(201, 137, 27);\n  font-size: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nul {\n  margin-top: 2rem;\n  list-style: none;\n  margin-bottom: 2rem;\n}\nli {\n  margin-bottom: 1rem;\n}\nmain {\n  height: 100vh;\n  width: 80vw;\n}\nmain > div {\n  width: 100%;\n  background-color: beige;\n  display: flex;\n  justify-content: space-between;\n  margin: 5px 0 5px 0;\n}\n"],"sourceRoot":""}]);
+.data {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.622);
+}
+.data span:hover {
+  cursor: pointer;
+}
+`, "",{"version":3,"sources":["webpack://./app/main.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,sBAAsB;AACxB;;AAEA;EACE,aAAa;EACb,aAAa;EACb,uCAAuC;EACvC,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,aAAa;EACb,WAAW;EACX,mCAAmC;EACnC,iBAAiB;EACjB,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;AACA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,mBAAmB;AACrB;AACA;EACE,mBAAmB;AACrB;AACA;EACE,aAAa;EACb,WAAW;AACb;AACA;EACE,WAAW;EACX,uBAAuB;EACvB,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;AACrB;AACA;EACE,eAAe;EACf,YAAY;EACZ,aAAa;EACb,sCAAsC;AACxC;AACA;EACE,eAAe;AACjB","sourcesContent":["* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  height: 100vh;\n  display: flex;\n  font-family: \"Walter Turncoat\", cursive;\n  font-weight: 400;\n  font-style: normal;\n}\nnav {\n  height: 100vh;\n  width: 20vw;\n  background-color: rgb(201, 137, 27);\n  font-size: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\nul {\n  margin-top: 2rem;\n  list-style: none;\n  margin-bottom: 2rem;\n}\nli {\n  margin-bottom: 1rem;\n}\nmain {\n  height: 100vh;\n  width: 80vw;\n}\nmain > div {\n  width: 100%;\n  background-color: beige;\n  display: flex;\n  justify-content: space-between;\n  margin: 5px 0 5px 0;\n}\n.data {\n  position: fixed;\n  width: 100vw;\n  height: 100vh;\n  background-color: rgba(0, 0, 0, 0.622);\n}\n.data span:hover {\n  cursor: pointer;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17924,18 +17950,6 @@ const today_text = document.createTextNode("Today");
 const thisWeek_text = document.createTextNode("This Week");
 const projectsTitle_text = document.createTextNode("Projects");
 const addProjects_text = document.createTextNode("Add Project");
-const activitiesItem = document.createElement("div");
-const actItem_Title = document.createElement("h4");
-const actItem_check = document.createElement("button");
-const actItem_del = document.createElement("button");
-const itemButtonGroup = document.createElement("div");
-const actItem_check_icon = document.createElement("span");
-const actItem_del_icon = document.createElement("span");
-const actItem_Title_text = document.createTextNode("EXAMPLE 1");
-actItem_check_icon.classList.add("material-symbols-outlined");
-actItem_del_icon.classList.add("material-symbols-outlined");
-const actItem_check_text = document.createTextNode("check");
-const actItem_del_text = document.createTextNode("delete");
 const addItem = document.createElement("div");
 const addItem_text = document.createTextNode("ADD ITEM");
 allActivites.appendChild(allActivites_text);
@@ -17951,17 +17965,7 @@ mainWindow.style.backgroundImage = `url(${_img_scrampled_png__WEBPACK_IMPORTED_M
 sideBar.appendChild(activitiesList);
 sideBar.appendChild(projectsTitle);
 sideBar.appendChild(projectsList);
-actItem_Title.appendChild(actItem_Title_text);
-activitiesItem.appendChild(actItem_Title);
-actItem_check_icon.appendChild(actItem_check_text);
-actItem_del_icon.appendChild(actItem_del_text);
-actItem_check.appendChild(actItem_check_icon);
-actItem_del.appendChild(actItem_del_icon);
-itemButtonGroup.appendChild(actItem_check);
-itemButtonGroup.appendChild(actItem_del);
-activitiesItem.appendChild(itemButtonGroup);
 addItem.appendChild(addItem_text);
-mainWindow.appendChild(activitiesItem);
 mainWindow.appendChild(addItem);
 document.body.appendChild(sideBar);
 document.body.appendChild(mainWindow);

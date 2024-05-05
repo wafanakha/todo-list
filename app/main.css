@@ -39,3 +39,12 @@ main > div {
   justify-content: space-between;
   margin: 5px 0 5px 0;
 }
+.data {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.622);
+}
+.data span:hover {
+  cursor: pointer;
+}
